@@ -1,0 +1,52 @@
+mixin banners-block()
+    .banners-block 
+        .banners-block__slider.swiper(data-slider="banner-block")
+            .swiper-wrapper 
+                .banners-block__slide.swiper-slide.first 
+                    a(href="#!").banners-block__link
+                        img(src="img/content/card11.webp" alt="Фото продукта Apple" width="571" heigth="320")
+                        .banners-block__info 
+                            h3 Apple
+                            .banners-block__text 
+                                p iPhone
+                                p iPad
+                                p AirPods
+                                p Mac
+                                p Apple Watch
+                .banners-block__slide.swiper-slide 
+                    a(href="#!").banners-block__link 
+                        img(src="img/content/card12.webp" alt="Фото продукта Apple" width="277" heigth="320")
+                        .banners-block__info 
+                            h3 Смартфоны <br>других брендов
+                .banners-block__slide.swiper-slide 
+                    a(href="#!").banners-block__link 
+                        img(src="img/content/card13.webp" alt="Фото продукта Apple" width="277" heigth="320")
+                        .banners-block__info 
+                            h3 Красота <br>и здоровье
+                .banners-block__slide.swiper-slide.first  
+                    a(href="#!").banners-block__link
+                        img(src="img/content/card11.webp" alt="Фото продукта Apple" width="571" heigth="320")
+                        .banners-block__info 
+                            h3 Apple
+                            .banners-block__text 
+                                p iPhone
+                                p iPad
+                                p AirPods
+                                p Mac
+                                p Apple Watch
+                .banners-block__slide.swiper-slide 
+                    a(href="#!").banners-block__link
+                        img(src="img/content/card12.webp" alt="Фото продукта Apple" width="571" heigth="320")
+                        .banners-block__info 
+                            h3 Смартфоны <br>других брендов
+                .banners-block__slide.swiper-slide 
+                    a(href="#!").banners-block__link
+                        img(src="img/content/card13.webp" alt="Фото продукта Apple" width="571" heigth="320")
+                        .banners-block__info 
+                            h3 Красота <br>и здоровье
+        .banners-block__buttons 
+            .swiper-button-next.banners-block__next
+                +icon('arrow-left', 120, 120) 
+            .swiper-button-prev.banners-block__prev
+                +icon('arrow-left', 120, 120)
+                            

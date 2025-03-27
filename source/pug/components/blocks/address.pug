@@ -1,0 +1,26 @@
+mixin address()
+    section.address 
+        .container 
+            .address__wrapper 
+                .address__left 
+                    h2.address__title Адрес магазина
+                    p.address__place г. Москва, ул. Барклая, д 10, ТЦ "Багратионовский", 1-й этаж, магазин А-27
+                    .address__block 
+                        .address__metro 
+                            span Метро
+                            p.address__station Багратионовская
+                        .address__email 
+                            span E-mail
+                            a(href="mailto:sell@cordstore.ru") sell@cordstore.ru
+                        .address__work 
+                            span Режим работы
+                            p.address__days Пн - Вс: 10:00 - 20:00
+                            p.address__weekend Без выходных
+                        .address__phones 
+                            span Телефон
+                            a(href="tel:+79770004503") +7 (977) 000-45-03
+                            a(href="tel:+79339003343") +7 (933) 900-33-43
+                    button(type="button").address__btn Написать сообщение
+                .address__right 
+                    .address__map
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1bf448db477823c50aaedaaf1e2883bfc2a5287b1d9c557e189fa291538198e7&amp;source=constructor" width="750" height="370" frameborder="0"></iframe>

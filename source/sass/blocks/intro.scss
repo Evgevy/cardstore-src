@@ -1,0 +1,113 @@
+.intro {
+    overflow: hidden;
+    &__wrapper {
+        padding: 15px 0 50px;
+        
+    }
+
+    &__banner {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            @include vp-767 {
+                display: none;
+            }
+        }
+
+        img:nth-child(2) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+
+            @include vp-767 {
+                display: block;
+            }
+        }
+
+        @include vp-1023 {
+            height: 300px;
+        }
+
+        @include vp-767 {
+            width: 100%;
+            height: 400px;
+            aspect-ratio: 288/400;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        top: 0;
+        padding: 30px;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        @include vp-389 {
+            padding: 16px;
+        }
+    }
+
+    &__title {
+        font-family: 'VelaSans';
+        font-size: 36px;
+        line-height: 120%;
+        font-weight: 600;
+        color: rgba(23, 23, 23, 1);
+        max-width: 385px;
+        margin: 0 0 15px;
+
+        @include vp-767 {
+            font-size: 28px;
+            max-width: 300px;
+        }
+    }
+
+    &__text {
+        font-family: 'VelaSans';
+        font-size: 24px;
+        line-height: 150%;
+        font-weight: 500;
+        color: rgba(23, 23, 23, 1);
+        margin: 0 0 15px;
+
+        @include vp-767 {
+            font-size: 22px;
+            
+        }
+    }
+
+    &__link {
+        font-family: 'VelaSans';
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        background: rgba(23, 23, 23, 1);
+        padding: 15px;
+        max-width: 224px;
+        border-radius: 10px;
+        text-align: center;
+        transition: .3s;
+        margin: auto 0 0;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        @include vp-389 {
+            max-width: 100%;
+        }
+    }
+}

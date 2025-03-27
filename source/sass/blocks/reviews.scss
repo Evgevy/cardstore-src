@@ -1,0 +1,205 @@
+.reviews {
+    overflow: hidden;
+    &__wrapper {
+        padding: 50px 0;
+
+        @include vp-767 {
+            padding: 30px 0;
+        }
+    }
+
+    &__top {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include vp-1023 {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        font-family: 'VelaSans';
+        font-size: 36px;
+        line-height: 120%;
+        font-weight: 600;
+        color: rgba(23, 23, 23, 1);
+        margin: 0; 
+
+        @include vp-1023 {
+            margin-bottom: 20px;
+        }
+
+        @include vp-767 {
+            font-size: 28px;
+        }
+    }
+
+    &__grades {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        img {
+            flex-shrink: 0
+        }
+    } 
+
+    &__tab-buttons {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin-bottom: 50px;
+        @include vp-1023 {
+            overflow: visible;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include vp-1023 {
+            gap: 0;
+            height: auto;
+        }
+    }
+
+    .reviews__tab-item.swiper-slide {
+        width: auto;
+        padding: 0;
+        background: none;
+    }
+
+    &__tab-btn {
+        font-family: 'VelaSans';
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(23, 23, 23, 1);
+        padding: 16px 24px;
+        background: rgba(246, 246, 246, 1);
+        border-radius: 15px;
+
+        &--active {
+            background: rgba(62, 209, 128, 1);
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+
+    &__panel-item {
+        display: none;
+        &--active {
+            display: block;
+        }
+    }
+
+    &__tab-list.swiper {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .swiper-wrapper {
+        height: auto;
+    }
+
+    .swiper-slide {
+        width: 336px;
+        display: flex;
+        flex-direction: column;
+        background: rgba(246, 246, 246, 1);
+        border-radius: 15px;
+        padding: 20px;
+
+        @include vp-389 {
+            width: 100%;
+        }
+    }
+
+    &__slide-top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 25px;
+        svg {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__name {
+        font-family: 'VelaSans';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        color: rgba(23, 23, 23, 1);
+        margin: 0 0 5px;
+    }
+
+    &__day {
+        font-family: 'VelaSans';
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 18px;
+        color: rgba(23, 23, 23, 1);
+        margin: 0;
+
+        a {
+            display: inline;
+            color: rgba(14, 193, 47, 1);
+            text-decoration: underline;
+        }
+    }
+
+    &__raiting {
+        margin-bottom: 15px;
+    }
+
+    &__reviews-text {
+        font-family: 'VelaSans';
+        font-size: 14px;
+        line-height: 150%;
+        color: rgba(87, 87, 87, 1);
+        margin: 0 0 20px;
+    }
+
+    &__link {
+        font-family: 'VelaSans';
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 600;
+        color: rgba(23, 23, 23, 1);
+        transition: .3s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .swiper-pagination.reviews__pagination {
+        position: static;
+        display: flex;    
+        justify-content: center; 
+        margin: 22px 0 0; 
+        gap: 16px;
+        .swiper-pagination-bullet {
+            width: 4px; 
+            height: 4px; 
+            background-color: rgba(23, 23, 23, 0.5); 
+            border-radius: 50%;
+            margin: 0; 
+            padding: 0;
+            border: none;
+            transition: background-color 0.3s; 
+            flex-shrink: 0;
+            &.swiper-pagination-bullet-active {
+                width: 8px;
+                height: 8px;
+                background-color: rgba(23, 23, 23, 1); 
+            }
+        }
+    }
+}

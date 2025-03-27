@@ -1,0 +1,25 @@
+mixin services()
+    section.services 
+        .container 
+            .services__wrapper 
+                ul.services__list
+                    li.services__item 
+                        +icon('service1', 40, 40)
+                        p.services__name Гарантийное и постгарантийное <br>обслуживание
+                        span.services__text Гарантия 12 месяцев на всю технику
+                    li.services__item 
+                        +icon('service2', 40, 40)
+                        p.services__name Быстрая доставка <br>и самовывоз
+                        span.services__text Доставка по Москве в течение дня. В любую точку России до пункта выдачи или курьером до двери
+                    li.services__item 
+                        p.services__name-big Самые новые гаджеты <span>уже здесь</span>
+                        .services__image 
+                            img(src="img/content/service.png" alt="Фото смартфонов" width="577" height="577")
+                    li.services__item 
+                        +icon('service3', 40, 40)
+                        p.services__name Время <br>обновляться
+                        span.services__text Вместе с Trade-In программой <br>в Cord Store
+                    li.services__item 
+                        +icon('service4', 40, 40)
+                        p.services__name Эксперты <br>на связи
+                        span.services__text Мы поможем определиться с выбором и разобраться в тонкостях настроек

@@ -1,0 +1,130 @@
+mixin header(headerMods, currentUrl)
+  -
+    
+
+  header.header(class=headerMods data-header data-media="(max-width: 1023px)")
+    .container
+      .header__wrapper
+        nav.header__nav
+          .header__top 
+            p.header__adress Москва и область
+              +icon('adress', 9, 8)
+            p.header__city г. Москва, ул. Барклая, д 10, ТЦ "Багратионовский", 1-й этаж, магазин А-27
+              +icon('city', 10, 13)
+            .header__phone 
+              a(href="tel:+79339003343") +7 (933) 900-33-43
+                +icon('phone', 10, 10)
+              button(type="button").header__phone-list
+                +icon('arrow', 8, 8).header__arrow
+                .header__another-phone 
+                  a(href="tel:+79770004503") +7 (977) 000-45-03
+                    +icon('phone', 10, 10)
+          .header__center 
+            .header__logo-block
+              a.header__logo(href="/", aria-label="Переход на главную")
+                img(src="img/content/logo.webp").header__logo-icon
+              p.header__logo-text Только новая оригинальная техника!
+            .header__search 
+              form(metod="get")
+                input(type="text" placeholder="Поиск")
+                button(type="submit")
+                  +icon('search', 10, 10)
+            .header__center-box 
+              .header__options 
+                a(href="#!").header__option Оплата
+                a(href="#!").header__option Доставка
+                a(href="#!").header__option Гарантия
+                a(href="#!").header__option FAQ
+              .header__icons 
+                a(href="#!").header__icon
+                  +icon('icon1', 20, 20) 
+                a(href="#!").header__icon
+                  +icon('icon2', 20, 20) 
+                a(href="#!").header__icon
+                  +icon('icon3', 20, 20) 
+                a(href="#!").header__icon
+                  +icon('icon4', 20, 20) 
+            button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
+              span
+              span
+              span
+          .header__bottom 
+            .main-nav__menu
+              <ul class="main-nav__list" data-header-accordion>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Apple</a>
+                </li>
+                <li class="main-nav__item menu-item-has-children">
+                  <a class="main-nav__link" href="#">Смартфоны и гаджеты</a>
+                </li>   
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Для дома</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Аудио и видео</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Компьютеры и ноутбуки</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Красота и здоровье</a>
+                </li>
+                  <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Развлечения</a>
+                </li>
+                  <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Весь каталог</a>
+                </li>
+              </ul>
+        //- nav.main-nav
+        //-   button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
+        //-     span
+        //-     span
+        //-     span
+        //-   .main-nav__menu
+        //-     .main-nav__menu-top
+        //-       <ul class="main-nav__list" data-header-accordion>
+        //-         <li class="main-nav__item">
+        //-           <a class="main-nav__link" href="#">Главная</a>
+        //-         </li>
+        //-         <li class="main-nav__item menu-item-has-children">
+        //-           <a class="main-nav__link" href="#">Каталог</a>
+        //-         </li>   
+        //-         <li class="main-nav__item">
+        //-           <a class="main-nav__link" href="#">О мастерской</a>
+        //-         </li>
+        //-         <li class="main-nav__item">
+        //-           <a class="main-nav__link" href="#">Блог</a>
+        //-         </li>
+        //-         <li class="main-nav__item">
+        //-           <a class="main-nav__link" href="#">Контакты</a>
+        //-         </li>
+        //-         <li class="main-nav__item">
+        //-           <a class="main-nav__link" href="#">Мастер-класс</a>
+        //-         </li>
+        //-       </ul>
+            //- .main-nav__menu-bottom 
+            //-   form(action="" metod="get")
+            //-     .main-nav__search 
+            //-       +custom-input({
+            //-         type: "text",
+            //-         name: "search",
+            //-         placeholder: "Найти что-то классное"
+            //-       })
+            //-       button(type="button").main-nav__search-icon
+            //-         +icon('search', 24, 24)
+        //- .header__social
+        //-   a(href="#!").header__lc
+        //-     +icon('lc', 32, 32)
+        //-   a(href="#!").header__lc
+        //-     +icon('basket', 32, 32)
+        //-   a(href="#!").header__lc
+        //-     +icon('insta', 32, 32)
+        //-   a(href="#!").header__lc
+        //-     +icon('pinter', 32, 32)
+              
+  //- block modals
+  //-   +modal("modal--feedback")(data-modal="feedback")
+  //-       +popup()
+  //-   +modal("modal--thanks")(data-modal="thanks")
+  //-       +popup-thanks()

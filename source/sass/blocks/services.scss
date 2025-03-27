@@ -1,0 +1,176 @@
+.services {
+    &__wrapper {
+      padding: 50px 0;
+
+      @include vp-767 {
+        padding: 20px 0;
+      }
+    }
+  
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 210px 290px;
+      gap: 16px;
+
+      @include vp-1023 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+    }
+  
+    &__item {
+      display: flex;
+      flex-direction: column;
+      background: rgba(246, 246, 246, 1);
+      border-radius: 15px;
+      padding: 20px;
+      overflow: hidden;
+
+      @include vp-767 {
+        padding: 15px;
+      }
+    }
+  
+    &__item:first-child {
+      grid-column: 1;
+      grid-row: 1;
+
+      @include vp-1023 {
+        grid-column: 1;
+        grid-row: 1;  
+        min-height: 190px;
+      }
+    }
+  
+    &__item:nth-child(2) {
+      grid-column: 1;
+      grid-row: 2;
+      @include vp-1023 {
+        grid-column: 1;
+        grid-row: 2;  
+        min-height: 220px;
+      }
+    }
+  
+    &__item:nth-child(3) {
+      grid-column: 2;
+      grid-row: 1 / span 2; 
+      padding-bottom: 0;
+      @include vp-1023 {
+        grid-column: 1;
+        grid-row: 3;  
+        gap: 30px;
+      }
+
+      @include vp-389 {
+        gap: 16px;
+      }
+    }
+  
+    &__item:nth-child(4) {
+      grid-column: 3;
+      grid-row: 1;
+      min-height: 290px;
+      @include vp-1023 {
+        grid-column: 1;
+        grid-row: 4;  
+        min-height: 220px;
+      }
+    }
+  
+    &__item:nth-child(5) {
+      grid-column: 3;
+      grid-row: 2;
+      min-height: 210px;
+      margin-top: auto;
+      @include vp-1023 {
+        grid-column: 1;
+        grid-row: 5;  
+        min-height: 190px;
+      }
+    }
+  
+    &__name {
+      font-family: 'VelaSans';
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 120%;
+      color: rgba(23, 23, 23, 1);
+      margin: auto 0 10px;
+
+      @include vp-767 {
+        font-size: 18px;
+      }
+    }
+
+    &__text {
+        font-family: 'VelaSans';
+        font-size: 13px;
+        line-height: 22px;
+        color: rgba(153, 153, 153, 1);
+        margin: 0;
+        max-width: 260px;
+
+        @include vp-1023 {
+          max-width: 100%;
+        }
+    }
+
+    &__name-big {
+      font-family: 'VelaSans';
+      font-size: 32px;
+      line-height: 120%;
+      font-weight: 500;
+      margin: 0;
+      text-align: center;
+      margin-top: 30px;
+
+      span {
+        font-weight: 700;
+      }
+
+      @include vp-767 {
+        font-size: 20px;
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      @include vp-389 {
+        margin-top: 0;
+      }
+    }
+
+    &__image {
+      margin-top: auto; 
+      max-width: 100%;
+      height: auto; 
+      overflow: hidden;
+      aspect-ratio: 600/650; 
+      
+      img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+      }
+
+      @include vp-1023 {
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+      }
+
+      @include vp-389 {
+        width: 400px;
+        height: 200px;
+      }
+    }
+
+    br {
+      @include vp-1023 {
+        display: none;
+      }
+    }
+}

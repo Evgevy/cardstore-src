@@ -1,0 +1,22 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "cardstore"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "index.html"
+
+block main
+    main
+      
+      +intro()
+      +select({ title: "Подобрали для вас" })
+      +models()
+      +select({ title: "Смартфоны", showTabButtons: false, smartphoneMode: true, showAllPanelItems: false })
+      +services()
+      +blog()
+      +reviews()
+      +address()
