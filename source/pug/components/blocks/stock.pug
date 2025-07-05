@@ -1,0 +1,19 @@
+mixin stock()
+    section.stock 
+        .container 
+            .stock__wrapper 
+                .swiper-button-prev.stock__prev
+                    +icon('arrow-left', 120, 120) 
+                .stock__slider.swiper(data-slider="stock")
+                    .swiper-wrapper 
+                        .swiper-slide 
+                            .stock__image 
+                                img(src="img/content/stock.png")
+                        .swiper-slide 
+                            .stock__image 
+                                img(src="img/content/stock.png")
+                        .swiper-slide 
+                            .stock__image 
+                                img(src="img/content/stock.png")
+                .swiper-button-next.stock__next
+                    +icon('arrow-left', 120, 120)  

@@ -12,7 +12,7 @@ const initSelectSlider = () => {
       pagination: {
         el: slider.querySelector('.swiper-pagination.select__pagination'), 
         clickable: true, 
-    },
+      },
     });
   });
 };

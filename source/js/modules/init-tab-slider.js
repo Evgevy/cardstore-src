@@ -5,7 +5,7 @@ const initTabSlider = () => {
     return;
   }
 
-  const mediaQuery = window.matchMedia('(max-width: 1190px)'); 
+  const mediaQuery = window.matchMedia('(max-width: 1340px)'); 
 
   const destroySwiper = (swiper) => {
     if (swiper) {

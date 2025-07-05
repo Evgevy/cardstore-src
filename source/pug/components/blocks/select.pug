@@ -13,22 +13,37 @@ mixin select(options = {})
                             .select__tab-item 
                                 button(type="button" data-tab="tab-1").select__tab-btn.select__tab-btn--active Хит
                             .select__tab-item 
-                                button(type="button" data-tab="tab-2").select__tab-btn Новинка
+                                button(type="button" data-tab="tab-2").select__tab-btn iPhone
                             .select__tab-item 
-                                button(type="button" data-tab="tab-3").select__tab-btn Бестселлер
+                                button(type="button" data-tab="tab-3").select__tab-btn iPad
                             .select__tab-item 
-                                button(type="button" data-tab="tab-4").select__tab-btn Гарантии
+                                button(type="button" data-tab="tab-4").select__tab-btn MacBook
+                            .select__tab-item 
+                                button(type="button" data-tab="tab-5").select__tab-btn AirPods
+                            .select__tab-item 
+                                button(type="button" data-tab="tab-6").select__tab-btn Apple Watch
+                            .select__tab-item 
+                                button(type="button" data-tab="tab-7").select__tab-btn Mac Mini
                 ul.select__panel 
                     if showAllPanelItems
                         li(id="tab-1").select__panel-item.select__panel-item--active
                             ul.select__tab-list.swiper(data-slider="tab-list")
                                 .select__slider-list.swiper-wrapper
                                     li.select__tab-content.swiper-slide 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.aqua Гарантии
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -45,18 +60,40 @@ mixin select(options = {})
                                                         img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
                                                 .swiper-pagination.select__pagination
                                             p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                            span.select__nal При оплате наличными
                                             .select__prices
                                                 p.select__new-price 92 999 ₽
                                                 p.select__old-price 24 990 ₽
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide 
-                                        a(href="#!")
+                                       
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.green Новинка
                                                 p.select__card-top-text.aqua Гарантии
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -73,6 +110,7 @@ mixin select(options = {})
                                                         img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
                                                 .swiper-pagination.select__pagination
                                             p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                            span.select__nal При оплате наличными
                                             .select__prices
                                                 p.select__new-price 92 999 ₽
                                                 p.select__old-price 24 990 ₽
@@ -80,58 +118,139 @@ mixin select(options = {})
                                                 p.select__have.not Нет в наличии
                                                 p.select__articul Арт.: DK1003OL
                                     li.select__tab-content.swiper-slide
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select8.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select8.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select8.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select8.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select8.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select8.png" alt="Фото видов продукции" width="170" height="156")
                                                 .swiper-pagination.select__pagination
                                             p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                            span.select__nal При оплате наличными
                                             .select__prices
                                                 p.select__new-price 92 999 ₽
                                                 p.select__old-price 24 990 ₽
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                 .swiper-pagination.select__pagination
                                             p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                            span.select__nal При оплате наличными
                                             .select__prices
                                                 p.select__new-price 92 999 ₽
                                                 p.select__old-price 24 990 ₽
                                             .select__info 
                                                 p.select__have В наличии
+                                                p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
+                                    li.select__tab-content.swiper-slide 
+                                       
+                                            .select__card-top 
+                                                p.select__card-top-text.orange Хит
+                                                p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
+                                            .select__slider.swiper(data-slider="select")
+                                                .swiper-wrapper 
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                .swiper-pagination.select__pagination
+                                            p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                            span.select__nal При оплате наличными
+                                            .select__prices
+                                                p.select__new-price 92 999 ₽
+                                                p.select__old-price 24 990 ₽
+                                            .select__info 
+                                                p.select__have.not Нет в наличии
                                                 p.select__articul Арт.: DK1003OL
                                 .swiper-pagination.tab-pagination
                             a(href="#!").select__catalog.select__catalog--mobile Смотреть весь каталог
@@ -144,24 +263,33 @@ mixin select(options = {})
                                         a(href="#!") Перейти к покупке
                                 .select__slide-block
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
                                                 .swiper-pagination.select__pagination
                                             p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
                                             .select__prices
@@ -170,25 +298,46 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select12.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select12.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select12.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select12.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select12.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select12.png" alt="Фото видов продукции" width="170" height="156")
                                                 .swiper-pagination.select__pagination
                                             p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
                                             .select__prices
@@ -197,25 +346,46 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
                                                     .select__slide.swiper-slide 
-                                                        img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                                        img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
                                                 .swiper-pagination.select__pagination
                                             p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
                                             .select__prices
@@ -224,11 +394,128 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
+                                            .select__slider.swiper(data-slider="select")
+                                                .swiper-wrapper 
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                                .swiper-pagination.select__pagination
+                                            p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                            .select__prices
+                                                p.select__new-price 92 999 ₽
+                                                p.select__old-price 24 990 ₽
+                                            .select__info 
+                                                p.select__have В наличии
+                                                p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
+                                    .select__tab-content 
+                                        
+                                            .select__card-top 
+                                                p.select__card-top-text.orange Хит
+                                                p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
+                                            .select__slider.swiper(data-slider="select")
+                                                .swiper-wrapper 
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                                    .select__slide.swiper-slide 
+                                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                                .swiper-pagination.select__pagination
+                                            p.select__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                            .select__prices
+                                                p.select__new-price 92 999 ₽
+                                                p.select__old-price 24 990 ₽
+                                            .select__info 
+                                                p.select__have В наличии
+                                                p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
+                                    .select__tab-content 
+                                        
+                                            .select__card-top 
+                                                p.select__card-top-text.orange Хит
+                                                p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -251,14 +538,35 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                         li(id="tab-2").select__panel-item
                             ul.select__tab-list.swiper(data-slider="tab-list") 
                                 .select__slider-list.swiper-wrapper
                                     li.select__tab-content.swiper-slide 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -281,11 +589,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -308,11 +637,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide 
-                                        a(href="#!")
+                                       
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -335,11 +685,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -362,6 +733,18 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                 .swiper-pagination.tab-pagination
                             a(href="#!").select__catalog.select__catalog--mobile Смотреть весь каталог
                             .select__big-block 
@@ -373,10 +756,19 @@ mixin select(options = {})
                                         a(href="#!") Перейти к покупке
                                 .select__slide-block
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -399,11 +791,33 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
+                                                    
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -426,11 +840,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -453,11 +888,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -480,14 +936,35 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                         li(id="tab-3").select__panel-item
                             ul.select__tab-list.swiper(data-slider="tab-list") 
                                 .select__slider-list.swiper-wrapper
                                     li.select__tab-content.swiper-slide 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -510,12 +987,33 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide  
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.aqua Гарантии
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -538,11 +1036,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide  
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -565,11 +1084,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -592,6 +1132,18 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                 .swiper-pagination.tab-pagination
                             a(href="#!").select__catalog.select__catalog--mobile Смотреть весь каталог
                             .select__big-block 
@@ -603,10 +1155,19 @@ mixin select(options = {})
                                         a(href="#!") Перейти к покупке
                                 .select__slide-block
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -629,11 +1190,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -656,11 +1238,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -683,11 +1286,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -710,16 +1334,37 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                     else 
                         li(id="tab-1").select__panel-item.select__panel-item--active
                             ul.select__tab-list.swiper(data-slider="tab-list") 
                                 .select__slider-list.swiper-wrapper
                                     li.select__tab-content.swiper-slide 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.aqua Гарантии
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -742,12 +1387,33 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide  
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.green Новинка
                                                 p.select__card-top-text.aqua Гарантии
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -771,10 +1437,19 @@ mixin select(options = {})
                                                 p.select__have.not Нет в наличии
                                                 p.select__articul Арт.: DK1003OL
                                     li.select__tab-content.swiper-slide  
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -797,11 +1472,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     li.select__tab-content.swiper-slide  
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -824,6 +1520,18 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                 .swiper-pagination.tab-pagination
                             a(href="#!").select__catalog.select__catalog--mobile Смотреть весь каталог
                             .select__big-block 
@@ -835,10 +1543,19 @@ mixin select(options = {})
                                         a(href="#!") Перейти к покупке
                                 .select__slide-block
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -861,11 +1578,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -888,11 +1626,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -915,11 +1674,32 @@ mixin select(options = {})
                                             .select__info 
                                                 p.select__have В наличии
                                                 p.select__articul Арт.: DK1003OL
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину
                                     .select__tab-content 
-                                        a(href="#!")
+                                        
                                             .select__card-top 
                                                 p.select__card-top-text.orange Хит
                                                 p.select__card-top-text.purple Бестселлер
+                                            .select__icons 
+                                                button(type="button")
+                                                    +icon('b1', 18, 18)
+                                                button(type="button")
+                                                    +icon('b2', 18, 18)
+                                                button(type="button")
+                                                    +icon('b3', 18, 18)
+                                                button(type="button")
+                                                    +icon('b4', 18, 18)
                                             .select__slider.swiper(data-slider="select")
                                                 .swiper-wrapper 
                                                     .select__slide.swiper-slide 
@@ -941,6 +1721,18 @@ mixin select(options = {})
                                                 p.select__old-price 24 990 ₽
                                             .select__info 
                                                 p.select__have В наличии
-                                                p.select__articul Арт.: DK1003OL   
+                                                p.select__articul Арт.: DK1003OL  
+                                            .select__dop 
+                                                .select__dop-text 
+                                                    p Доставим за 2 часа
+                                                    span По Москве и области
+                                                .select__more 
+                                                    .select__input 
+                                                        button(type="button").select__input-minus
+                                                            +icon('minus', 11, 1)
+                                                        .select__num 1
+                                                        button(type="button").select__input-plus
+                                                            +icon('plus', 11, 11)
+                                                    button(type="button").select__card В корзину 
                 +another-select()
                 a(href="#!").select__catalog Смотреть весь каталог

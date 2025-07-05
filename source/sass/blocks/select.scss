@@ -1,7 +1,7 @@
 .select {
     overflow: hidden;
     &__wrapper {
-        padding: 50px 0;
+        margin: 50px 0;
         width: 100%;
         @include vp-767 {
             padding: 20px 0;
@@ -14,7 +14,7 @@
         align-items: center;
         justify-content: space-between;
 
-        @include vp-767 {
+        @media screen and (max-width: 990px) {
             flex-direction: column;
             margin-bottom: 30px;
             align-items: flex-start;
@@ -29,7 +29,7 @@
         color: rgba(23, 23, 23, 1);
         margin: 0; 
 
-        @include vp-767 {
+        @media screen and (max-width: 990px) {
             font-size: 28px;
             margin-bottom: 25px;
         }
@@ -37,23 +37,40 @@
 
     &__tab-buttons {
         display: flex;
-        gap: 20px;
-
-        @media screen and (max-width: 500px) {
-            max-width: 190px;
+        gap: 5px;
+        background: rgba(246, 246, 246, 1);
+        width: auto;
+        border-radius: 10px;
+        padding: 5px;
+        @media screen and (max-width: 990px) {
             flex-wrap: wrap;
         }
     }
 
     &__tab-btn {
         font-family: 'VelaSans';
+        font-weight: 400;
+        font-style: Regular;
         font-size: 14px;
+        leading-trim: NONE;
         line-height: 150%;
+        letter-spacing: 0%;
+        vertical-align: middle;
         color: rgba(153, 153, 153, 1);
+        padding: 6px 20px;
         &--active {
             color: rgba(23, 23, 23, 1);
             font-weight: 600;
-            border-bottom: 1px solid rgba(62, 209, 128, 1);
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 150%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            background: rgba(255, 255, 255, 1);
+            padding: 6px 20px;
+            border-radius: 7px;
         }
     }
 
@@ -65,8 +82,8 @@
     }
 
     &__tab-list {
-        margin-bottom: 50px;
-        overflow: hidden;
+        padding: 25px 5px;
+        overflow: visible;
         width: 100%;
         @media screen and (max-width: 1190px) {
             width: 100%;
@@ -79,7 +96,7 @@
     &__slider-list {
         
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         gap: 15px;
         @media screen and (max-width: 1190px) {
             display: flex;
@@ -110,7 +127,7 @@
             }
         }
 
-        @media screen and (max-width: 1190px) {
+        @media screen and (max-width: 1340px) {
             display: flex;
         }
 
@@ -124,13 +141,34 @@
         flex-direction: column;
         transition: .3s;
         border-radius: 15px;
+        position: relative;
+        z-index: 0;
         a {
             display: flex;
             flex-direction: column;
         }
 
         &:hover {
-            box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            .select__dop {
+                position: absolute;
+                z-index: 1;
+                bottom: -100px;
+                left: 0;
+                opacity: 1;
+                visibility: visible;
+                background: rgba(245, 245, 245, 0.99);
+                box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                padding: 15px;
+                border-radius: 0 0 15px 15px;
+            }
+
+            .select__icons {
+                opacity: 1;
+                visibility: visible;
+            }
         }
 
         @media screen and (max-width: 1300px) {
@@ -156,6 +194,27 @@
         align-items: start;
         gap: 5px;
         margin-bottom: 20px;
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        button {
+            transition: .3s;
+            svg {
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+                transition: .3s;
+            }
+        }
     }
 
     &__card-top-text {
@@ -237,6 +296,18 @@
         color: rgba(23, 23, 23, 1);
         margin: auto 0 20px;
         flex: 1;
+    }
+
+    &__nal {
+        font-family: 'VelaSans';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 8px;
+        leading-trim: NONE;
+        line-height: 150%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: rgba(153, 153, 153, 1);
     }
 
     &__prices {
@@ -415,8 +486,19 @@
 
     &__slide-block {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 35px 16px;
+
+        .select__tab-content:nth-child(3n) {
+            @include vp-1279 {
+                display: none;
+            }
+        }
+
+        @include vp-1279 {
+            grid-template-columns: 1fr 1fr;
+        }
+       
 
         @include vp-1023 {
             display: none;
@@ -444,13 +526,13 @@
             opacity: 0.8;
         }
 
-        @include vp-1023 {
-            display: none;
-            &--mobile {
-                display: block;
-                margin: 0 auto 30px;
-            }
-        }
+        // @include vp-1023 {
+        //     display: none;
+        //     &--mobile {
+        //         display: block;
+        //         margin: 0 auto 30px;
+        //     }
+        // }
 
         @include vp-389 {
             max-width: 100%;
@@ -458,9 +540,114 @@
     }
 
     .another-select {
-        @include vp-1023 {
-            display: none;
+        margin-bottom: 40px;
+        // @include vp-1023 {
+        //     display: none;
+        // }
+    }
+
+    &__dop {
+        margin-top: 10px;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    &__dop-text {
+        background: rgba(239, 252, 223, 1);
+        border-radius: 9px;
+        padding: 4px 0 6px 12px;
+        margin-bottom: 6px;
+        p {
+            font-family: 'VelaSans';
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 11px;
+            leading-trim: NONE;
+            line-height: 150%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            margin: 0 0 3px;
         }
+
+        span {
+            font-family: 'VelaSans';
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 8px;
+            leading-trim: NONE;
+            line-height: 150%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color: rgba(153, 153, 153, 1);
+            display: block;
+        }
+    }
+
+    &__more {
+        display: flex;
+        gap: 6px;
+    }
+
+    &__input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(248, 248, 248, 1);
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .select__input-minus {
+        display: flex;
+        svg {
+            width: 11px;
+            height: 2px;
+            flex-shrink: 0;
+        }
+    }
+
+    .select__input-plus {
+        display: flex;
+        svg {
+            width: 11px;
+            height: 11px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__num {
+        font-family: 'VelaSans';
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 150%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+
+    }
+
+    &__card {
+        width: 100%;
+        display: block;
+        background: rgba(62, 209, 128, 1);
+        color: rgba(255, 255, 255, 1);
+        font-family: 'VelaSans';
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 150%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        padding: 12px;
+        border-radius: 10px;
+        transition: .3s;
+    }
+
+    &__card:hover {
+        opacity: 0.8;
     }
 }
 

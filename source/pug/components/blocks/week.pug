@@ -1,0 +1,241 @@
+mixin week()
+    section.week 
+        .container 
+            .week__wrapper 
+                h2.week__title Предложение недели
+                .week__box 
+                    .week__item 
+                        .week__image 
+                            img(src="img/content/week.png" alt="Прибор")
+                        p.week__name Insta360 X5
+                        p.week__desc Весь день. Всю ночь. Во всех ракурсах.
+                    .week__item 
+                        .week__image 
+                            img(src="img/content/week.png" alt="Прибор")
+                        p.week__name Insta360 X5
+                        p.week__desc Весь день. Всю ночь. Во всех ракурсах.
+                ul.select1__tab-list
+                    .select1__slider-list.swiper-wrapper
+                        li.select1__tab-content.swiper-slide 
+                            .select1__card-top 
+                                p.select1__card-top-text.orange Хит
+                                p.select1__card-top-text.aqua Гарантии
+                                p.select1__card-top-text.purple Бестселлер
+                            .select__icons 
+                                button(type="button")
+                                    +icon('b1', 18, 18)
+                                button(type="button")
+                                    +icon('b2', 18, 18)
+                                button(type="button")
+                                    +icon('b3', 18, 18)
+                                button(type="button")
+                                    +icon('b4', 18, 18)
+                            .select1__slider.swiper(data-slider="select")
+                                .swiper-wrapper 
+                                    .select1__slide.swiper-slide 
+                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                    .select1__slide.swiper-slide 
+                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                    .select1__slide.swiper-slide 
+                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                    .select1__slide.swiper-slide 
+                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                    .select1__slide.swiper-slide 
+                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                    .select1__slide.swiper-slide 
+                                        img(src="img/content/select1.png" alt="Фото видов продукции" width="170" height="156")
+                                .swiper-pagination.select__pagination
+                            p.select1__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                            span.select1__nal При оплате наличными
+                            .select1__prices
+                                p.select1__new-price 92 999 ₽
+                                p.select1__old-price 24 990 ₽
+                            .select1__info 
+                                p.select1__have В наличии
+                                p.select1__articul Арт.: DK1003OL
+                            .select__dop 
+                                .select__dop-text 
+                                    p Доставим за 2 часа
+                                    span По Москве и области
+                                .select__more 
+                                    .select__input 
+                                        button(type="button").select__input-minus
+                                            +icon('minus', 11, 1)
+                                        .select__num 1
+                                        button(type="button").select__input-plus
+                                            +icon('plus', 11, 11)
+                                    button(type="button").select__card В корзину
+                        li.select1__tab-content.swiper-slide 
+                            
+                                .select1__card-top 
+                                    p.select1__card-top-text.orange Хит
+                                    p.select1__card-top-text.green Новинка
+                                    p.select1__card-top-text.aqua Гарантии
+                                .select__icons 
+                                    button(type="button")
+                                        +icon('b1', 18, 18)
+                                    button(type="button")
+                                        +icon('b2', 18, 18)
+                                    button(type="button")
+                                        +icon('b3', 18, 18)
+                                    button(type="button")
+                                        +icon('b4', 18, 18)
+                                .select1__slider.swiper(data-slider="select")
+                                    .swiper-wrapper 
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select2.png" alt="Фото видов продукции" width="170" height="156")
+                                    .swiper-pagination.select__pagination
+                                p.select1__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                span.select1__nal При оплате наличными
+                                .select1__prices
+                                    p.select1__new-price 92 999 ₽
+                                    p.select1__old-price 24 990 ₽
+                                .select1__info 
+                                    p.select1__have.not Нет в наличии
+                                    p.select1__articul Арт.: DK1003OL
+                        li.select1__tab-content.swiper-slide
+                            
+                                .select1__card-top 
+                                    p.select1__card-top-text.orange Хит
+                                    p.select1__card-top-text.purple Бестселлер
+                                .select__icons 
+                                    button(type="button")
+                                        +icon('b1', 18, 18)
+                                    button(type="button")
+                                        +icon('b2', 18, 18)
+                                    button(type="button")
+                                        +icon('b3', 18, 18)
+                                    button(type="button")
+                                        +icon('b4', 18, 18)
+                                .select1__slider.swiper(data-slider="select")
+                                    .swiper-wrapper 
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select13.png" alt="Фото видов продукции" width="170" height="156")
+                                    .swiper-pagination.select__pagination
+                                p.select1__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                span.select1__nal При оплате наличными
+                                .select1__prices
+                                    p.select1__new-price 92 999 ₽
+                                    p.select1__old-price 24 990 ₽
+                                .select1__info 
+                                    p.select1__have В наличии
+                                    p.select1__articul Арт.: DK1003OL
+                                .select__dop 
+                                    .select__dop-text 
+                                        p Доставим за 2 часа
+                                        span По Москве и области
+                                    .select__more 
+                                        .select__input 
+                                            button(type="button").select__input-minus
+                                                +icon('minus', 11, 1)
+                                            .select__num 1
+                                            button(type="button").select__input-plus
+                                                +icon('plus', 11, 11)
+                                        button(type="button").select__card В корзину
+                        li.select1__tab-content.swiper-slide 
+                            
+                                .select1__card-top 
+                                    p.select1__card-top-text.orange Хит
+                                    p.select1__card-top-text.purple Бестселлер
+                                .select__icons 
+                                    button(type="button")
+                                        +icon('b1', 18, 18)
+                                    button(type="button")
+                                        +icon('b2', 18, 18)
+                                    button(type="button")
+                                        +icon('b3', 18, 18)
+                                    button(type="button")
+                                        +icon('b4', 18, 18)
+                                .select1__slider.swiper(data-slider="select")
+                                    .swiper-wrapper 
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select3.png" alt="Фото видов продукции" width="170" height="156")
+                                    .swiper-pagination.select__pagination
+                                p.select1__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                span.select1__nal При оплате наличными
+                                .select1__prices
+                                    p.select1__new-price 92 999 ₽
+                                    p.select1__old-price 24 990 ₽
+                                .select1__info 
+                                    p.select1__have В наличии
+                                    p.select1__articul Арт.: DK1003OL
+                                .select__dop 
+                                    .select__dop-text 
+                                        p Доставим за 2 часа
+                                        span По Москве и области
+                                    .select__more 
+                                        .select__input 
+                                            button(type="button").select__input-minus
+                                                +icon('minus', 11, 1)
+                                            .select__num 1
+                                            button(type="button").select__input-plus
+                                                +icon('plus', 11, 11)
+                                        button(type="button").select__card В корзину
+                        li.select1__tab-content.swiper-slide 
+                            
+                                .select1__card-top 
+                                    p.select1__card-top-text.orange Хит
+                                    p.select1__card-top-text.purple Бестселлер
+                                .select__icons 
+                                    button(type="button")
+                                        +icon('b1', 18, 18)
+                                    button(type="button")
+                                        +icon('b2', 18, 18)
+                                    button(type="button")
+                                        +icon('b3', 18, 18)
+                                    button(type="button")
+                                        +icon('b4', 18, 18)
+                                .select1__slider.swiper(data-slider="select")
+                                    .swiper-wrapper 
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                        .select1__slide.swiper-slide 
+                                            img(src="img/content/select9.png" alt="Фото видов продукции" width="170" height="156")
+                                    .swiper-pagination.select__pagination
+                                p.select1__tab-text Телеприставка Apple TV 4K (3-го поколения), 64Gb (MN873)
+                                span.select1__nal При оплате наличными
+                                .select1__prices
+                                    p.select1__new-price 92 999 ₽
+                                    p.select1__old-price 24 990 ₽
+                                .select1__info 
+                                    p.select1__have.not Нет в наличии
+                                    p.select1__articul Арт.: DK1003OL
+                button(type="button").select1__all Загрузить все товары    

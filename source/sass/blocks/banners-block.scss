@@ -1,9 +1,7 @@
 .banners-block {
     position: relative;
 
-    @media screen and (max-width: 500px) {
-        display: none;
-    }
+   
     &__slider {
         width: 100%;
         height: 100%;
@@ -14,15 +12,25 @@
     }
 
     &__slide {
-        width: 330px !important;
-        // height: 420px;
+        width: 680px !important;
+        height: 380px;
 
         @include vp-767 {
-            width: 260px !important;
+            width: 535px !important;
         }
 
         @media screen and (max-width: 590px) {
-            width: 195px !important;
+            width: 400px !important;
+            height: 250px;
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 320px !important;
+            height: 250px;
+        }
+
+        @include vp-389 {
+            width: 300px !important;
         }
     }
 
@@ -37,10 +45,20 @@
         @media screen and (max-width: 590px) {
             width: 400px !important;
         }
+
+        @media screen and (max-width: 450px) {
+            width: 320px !important;
+            height: 250px;
+        }
+
+        @include vp-389 {
+            width: 300px !important;
+        }
     }
 
     &__link {
         width: 100%;
+        height: 100%;
         border-radius: 15px;
         overflow: hidden;
         position: relative;
@@ -91,6 +109,10 @@
                 border: 1px solid rgba(63, 63, 63, 1);
                 border-radius: 10px;
                 text-align: center;
+
+                @media screen and (max-width: 450px) {
+                    font-size: 10px;
+                }
             }
         }
     }

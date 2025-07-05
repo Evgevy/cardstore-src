@@ -44,7 +44,7 @@
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    gap: 5px;
+    gap: 9px;
     margin: 0;
     svg {
       width: 10px;
@@ -53,12 +53,65 @@
     }
   }
 
+  &__adress-top {
+    font-family: 'VelaSans';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 1);
+    margin: 0 25px 0 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 9px;
+
+    @include vp-1279 {
+      display: none;
+    }
+
+  }
+
+  &__call {
+    font-family: 'VelaSans';
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(62, 209, 128, 1);
+    transition: .3s;
+    margin-left: 10px;
+  }
+
+  &__call:hover {
+    opacity: 0.8;
+  }
+
+  &__time {
+    font-family: 'VelaSans';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: rgba(153, 153, 153, 1);    
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5px;
+  }
+
   &__city {
     font-family: 'VelaSans';
     font-size: 12px;
     line-height: 150%;
     color: rgba(153, 153, 153, 1);
-    margin: 0 90px 0 auto;
+    margin: 0 10px 0 auto;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -68,6 +121,11 @@
       height: 13px;
       flex-shrink: 0;
     } 
+
+    @include vp-1279 {
+      font-size: 10px;
+    }
+
     @include vp-1023 {
       margin: 0;
       align-items: flex-start;
@@ -188,13 +246,36 @@
 
   &__logo-text {
     font-family: 'VelaSans';
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
-    color: rgba(153, 153, 153, 1);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    transition: .3s;
     max-width: 160px;
     width: 100%;
     margin: 0;
+    background: rgba(246, 246, 246, 1);
+    padding: 12px;
+    border-radius: 10px;
+
+    &:hover {
+      color:rgba(62, 209, 128, 1);
+    }
+
+    svg {
+      width: 13px;
+      height: 13px;
+      transition: .3s;
+    }
+
+    &:hover svg {
+      fill:rgba(62, 209, 128, 1);
+    }
 
     @include vp-1023 {
       display: none;
@@ -219,12 +300,12 @@
 
   &__search {
     position: relative;
-    max-width: 336px;
+    max-width: 711px;
     width: 100%;
     margin-right: auto;
-    margin-left: 20px;
+    margin-left: 10px;
     input {
-      max-width: 336px;
+      max-width: 711px;
       width: 100%;
       background: rgba(246, 246, 246, 1);
       border: none;
@@ -255,8 +336,8 @@
       transform: translateY(-50%);
       padding-right: 11px;
       svg {
-        width: 11px;
-        height: 11px;
+        width: 13px;
+        height: 13px;
         flex-shrink: 0
       }
     }
@@ -318,7 +399,7 @@
 
   &__bottom {
     width: 100%;
-    padding: 14px 0;
+    padding: 10px 0;
     transition: .3s;
     @include vp-1023 {
       transform: translateX(100%);
@@ -342,12 +423,36 @@
   .main-nav__list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 15px;
+
+    // @media screen and (max-width: 1190px) {
+    //   justify-content: center;
+    // }
+
     @include vp-1023 {
       flex-direction: column;
       margin-bottom: 20px;
+      align-items: flex-start;
     }
     
+  }
+
+  .main-nav__item--stars {
+    margin-right: -40px;
+
+    @media screen and (max-width: 1420px) {
+      margin-right: -30px;
+    }
+
+    
+    @media screen and (max-width: 1320px) {
+      margin-right: -20px;
+    }
+
+    @media screen and (max-width: 1240px) {
+      margin-right: 0px;
+    }
   }
 
   .main-nav__link {
@@ -362,14 +467,62 @@
       opacity: 0.6;
     }
 
-    @media screen and (max-width: 1160px) {
-      font-size: 13px;
+    @media screen and (max-width: 1190px) {
+      font-size: 11px;
+    }
+
+    @include vp-1023 {
+      font-size: 14px;
+    }
+
+    &--stars {
+      background: linear-gradient(90deg, #F6F7F5 0%, #F0FBDF 42.03%, #EDFED3 100%);
+      padding: 7px 10px;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 6px;
+      font-family: 'VelaSans';
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: rgba(78, 134, 44, 1);
+
+      svg {
+        width: 13px;
+        height: 13px;
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+    }
+
+    &--iphone {
+      background: linear-gradient(90deg, #F5F5F6 0%, #E6DFFC 42.74%, #DED3FF 100%);
+      padding: 7px 10px;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 6px;
+      font-family: 'VelaSans';
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: rgba(140, 36, 245, 1);
+
+      svg {
+        width: 13px;
+        height: 13px;
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
     }
   }
 
-  .main-nav__item:last-child .main-nav__link {
-    color: rgba(62, 209, 128, 1);
-  }
+
 
   .main-nav__toggle {
     position: relative;

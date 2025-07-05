@@ -11,13 +11,7 @@
     &__top {
         margin-bottom: 30px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        @include vp-1023 {
-            flex-direction: column;
-            align-items: flex-start;
-        }
+        flex-direction: column;
     }
 
     &__title {
@@ -26,7 +20,7 @@
         line-height: 120%;
         font-weight: 600;
         color: rgba(23, 23, 23, 1);
-        margin: 0; 
+        margin: 0 0 50px; 
 
         @include vp-1023 {
             margin-bottom: 20px;
@@ -41,11 +35,100 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        flex-wrap: wrap;
+        background-color: rgba(246, 246, 246, 1);
+        width: max-content;
+        border-radius: 8px;
+        padding: 6px 20px 6px 6px;
+        gap: 13px;
         img {
             flex-shrink: 0
         }
+
+        @media screen and (max-width: 620px) {
+            flex-wrap: wrap;
+            width: 100%;
+        }
     } 
+
+    .reviews__grade {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .reviews__grade--active {
+        background: rgba(255, 255, 255, 1);
+        gap: 8px;
+        padding: 4px 12px;
+        border-radius: 5px;
+    }
+
+    .reviews__rat {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: 'VelaSans';
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    .reviews__rat p {
+        margin: 0;
+    }
+
+    .reviews__line {
+        display: flex;
+        svg {
+            width: 2px;
+            height: 17px;
+        }
+    }
+
+    .reviews__rat-all {
+        font-family: 'VelaSans';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    .reviews__who {
+        font-family: 'VelaSans';
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 15.5px;
+        leading-trim: NONE;
+        line-height: 16px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    .reviews__many {
+        font-family: 'VelaSans';
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 15.75px;
+        leading-trim: NONE;
+        line-height: 24px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
 
     &__tab-buttons {
         width: 100%;
@@ -89,6 +172,10 @@
         }
     }
 
+    &__panel {
+        position: relative;
+    }
+
     &__panel-item {
         display: none;
         &--active {
@@ -96,9 +183,54 @@
         }
     }
 
+    &__buttons {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        top: 40%;
+        z-index: 1;
+    }
+    
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        margin: 0;
+        flex-shrink: 0;
+        &::after {
+            display: none;
+        }
+
+        transition: .3s;
+        svg {
+            width: 120px;
+            height: 120px;
+            transition: .3s;
+            flex-shrink: 0;
+        }
+
+        &:hover {
+           opacity: 0.7;
+        }
+    }
+
+    .swiper-button-prev {
+        left: -10px;
+    }
+    
+    .swiper-button-next {
+        right: -10px;
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+
     &__tab-list.swiper {
         width: 100%;
-        overflow: visible;
+        overflow: hidden;
+
+        @media screen and (max-width: 910px) {
+            overflow: visible;
+        }
     }
 
     .swiper-wrapper {
@@ -106,14 +238,14 @@
     }
 
     .swiper-slide {
-        width: 336px;
+        width: 375px;
         display: flex;
         flex-direction: column;
         background: rgba(246, 246, 246, 1);
         border-radius: 15px;
         padding: 20px;
 
-        @include vp-389 {
+        @media screen and (max-width: 420px) {
             width: 100%;
         }
     }

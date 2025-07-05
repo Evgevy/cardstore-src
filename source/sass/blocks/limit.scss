@@ -1,0 +1,128 @@
+.limit {
+    overflow: hidden;
+
+    &__wrapper {
+        padding: 40px 0;
+    }
+
+    &__title {
+        font-family: 'VelaSans';
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 36px;
+        leading-trim: NONE;
+        line-height: 120%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        margin: 0 0 50px;
+
+        @include vp-767 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__buttons {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        top: 40%;
+        z-index: 1;
+
+        @include vp-767 {
+           top: 25%;
+        }
+    }
+    
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        margin: 0;
+        flex-shrink: 0;
+        &::after {
+            display: none;
+        }
+
+        transition: .3s;
+        svg {
+            width: 120px;
+            height: 120px;
+            transition: .3s;
+            flex-shrink: 0;
+        }
+
+        &:hover {
+           opacity: 0.7;
+        }
+    }
+
+    .swiper-button-prev {
+        left: -10px;
+    }
+    
+    .swiper-button-next {
+        right: -10px;
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .swiper-pagination.limit__pagination {
+        position: static;
+        display: flex;    
+        justify-content: center; 
+        margin: 22px 0; 
+        gap: 6px;
+        .swiper-pagination-bullet {
+            width: 4px; 
+            height: 4px; 
+            background-color: rgba(23, 23, 23, 0.5); 
+            border-radius: 50%;
+            margin: 0; 
+            padding: 0;
+            border: none;
+            transition: background-color 0.3s; 
+            flex-shrink: 0;
+            &.swiper-pagination-bullet-active {
+                width: 8px;
+                height: 8px;
+                background-color: rgba(23, 23, 23, 1); 
+            }
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        height: 100%;
+        user-select: none;
+    }
+
+    .swiper-wrapper {
+        height: auto;
+    }
+
+    .swiper-slide {
+        width: 1000px;
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        // max-width: 100%;
+        // height: auto;
+        // aspect-ratio: 1160/220;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include vp-767 {
+            height: 170px;
+        }
+    }
+}

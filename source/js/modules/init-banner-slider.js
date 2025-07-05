@@ -8,15 +8,18 @@ const initBannerSlider = () => {
   const swiper = new Swiper(slider, {
     slidesPerView: 'auto', // Позволяет слайдам занимать авто-ширину 
     // centeredSlides: true, // Центрирует активный слайд
-    spaceBetween: 30,
+    spaceBetween: 16,
+    initialSlide: 1,
+    centeredSlides: true,  
+    loop: true,
     breakpoints: {
       300: {
         slidesPerView: 'auto',
-        spaceBetween: 20
+        spaceBetween: 16
       },
       767: {
         slidesPerView: 'auto',
-        spaceBetween: 30
+        spaceBetween: 16
       },
     },
     navigation: {

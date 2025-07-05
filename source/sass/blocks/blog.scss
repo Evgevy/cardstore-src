@@ -1,11 +1,8 @@
 .blog {
     overflow: hidden;
     &__wrapper {
-        padding: 50px 0;
-
-        @include vp-767 {
-            padding: 20px 0;
-        }
+        padding: 40px 0;
+        position: relative;
     }
 
     &__top {
@@ -31,14 +28,9 @@
     &__links {
         display: flex;
         gap: 20px;
-        
-        @include vp-389 {
-            display: none;
-        }
     }
 
-    &__link,
-    &__link-mobile {
+    &__link {
         font-family: 'VelaSans';
         font-size: 14px;
         line-height: 150%;
@@ -54,208 +46,310 @@
         }
     }
 
-    &__link-mobile {
-        display: none;
-        @media screen and (max-width: 500px) {
-            display: flex;
-            margin: 0 auto;
-            justify-content: center;
-            max-width: 290px;
-            width: 100%;
-            border: 1px solid rgba(23, 23, 23, 1);
-            padding: 15px;
-            border-radius: 10px;
-            transition: .3s;
+    // &__link-mobile {
+    //     display: none;
+    //     @media screen and (max-width: 500px) {
+    //         display: flex;
+    //         margin: 0 auto;
+    //         justify-content: center;
+    //         max-width: 290px;
+    //         width: 100%;
+    //         border: 1px solid rgba(23, 23, 23, 1);
+    //         padding: 15px;
+    //         border-radius: 10px;
+    //         transition: .3s;
 
-            &:hover {
-                opacity: 0.8;
-            }
-        }
-    }
+    //         &:hover {
+    //             opacity: 0.8;
+    //         }
+    //     }
+    // }
 
     &__link.all {
         color: rgba(153, 153, 153, 1);
     }
 
-    &__tab-buttons {
+
+
+    &__slider {
         width: 100%;
         height: 100%;
-        position: relative;
-        margin-bottom: 50px;
-        @include vp-1023 {
+        padding: 25px 0;
+
+        @include vp-767 {
             overflow: visible;
-            margin-bottom: 30px;
         }
     }
 
-    &__tab-list-btn {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        @include vp-1023 {
-            gap: 0;
-        }
-    }
-
-    &__tab-btn {
-        flex: 1;
-        font-family: 'VelaSans';
-        font-size: 16px;
-        line-height: 24px;
-        color: rgba(23, 23, 23, 1);
-        padding: 16px 24px;
-        background: rgba(246, 246, 246, 1);
-        border-radius: 15px;
-
-        &--active {
-            background: rgba(62, 209, 128, 1);
-            color: rgba(255, 255, 255, 1);
-        }
-
-        @include vp-1023 {
-            width: auto;
-        }
-    }
-
-    .blog__tab-item.swiper-slide {
-        width: auto;
-    }
-
-    &__panel-item {
-        display: none;
-        &--active {
-            display: block;
-        }
-    }
-
-    &__tab-list {
-        width: 100%;
-        height: 100%;
-        
-    }
-
-    &__slider-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        justify-content: space-between;
-        @include vp-767 {
-            display: flex;
-            gap: 0;
-            height: auto;
-        }
-    }
-
-    &__tab-content.swiper-slide {
-       
-        
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        @include vp-767 {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    &__card {
-        width: 100%;
-    }
-
-    &__image {
-        max-width: 100%;
+    .swiper-wrapper {
         height: auto;
-        overflow: hidden;
-        aspect-ratio: 570/377;
-        border-radius: 10px;
+    }
+
+    .swiper-slide.blog__big  {
         position: relative;
-        z-index: -1;
-        img {
+        width: 770px !important;
+        height: 377px;
+        z-index: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        .blog__image {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
 
-        @media screen and (max-width: 500px) {
-            height: 400px;
-        }
-    }
-
-    &__info {
-        position: absolute;
-        z-index: 1;
-        bottom: 0;
-        left: 0;
-        padding: 0 20px 30px 30px;
-        max-width: 350px;
-
-        @include vp-767 {
-            max-width: 100%;
-        }
-    }
-
-    &__name {
-        font-family: 'VelaSans';
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 120%;
-        color: rgba(255, 255, 255, 1);
-        margin: 0 0 15px;
-
-        @media screen and (max-width: 500px) {
-            font-size: 18px;
-        }
-    }
-
-    &__extra {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    &__date,
-    &__views {
-        font-family: 'VelaSans';
-        font-size: 14px;
-        line-height: 20px;
-        color: rgba(255, 255, 255, 1);
-        margin: 0;
-        opacity: 0.5;
-    }
-
-    &__views {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .swiper-pagination.blog-pagination {
-        position: static;
-        display: none;    
-        justify-content: center; 
-        margin: 20px 0 30px; 
-        gap: 16px;
-        .swiper-pagination-bullet {
-            width: 4px; 
-            height: 4px; 
-            background-color: rgba(23, 23, 23, 0.5); 
-            border-radius: 50%;
-            margin: 0; 
-            padding: 0;
-            border: none;
-            // transition: background-color 0.3s; 
-            flex-shrink: 0;
-            &.swiper-pagination-bullet-active {
-                width: 8px;
-                height: 8px;
-                background-color: rgba(88, 88, 88, 1); 
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
-        @include vp-767 {
-            display: flex;
+        @media screen and (max-width: 990px) {
+            width: 570px !important;
         }
 
+        @include vp-767 {
+            width: 450px !important;
+        }
+
+        @media screen and (max-width: 490px) {
+            width: 280px !important;
+        }
+
+        .blog__info {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 2;
+        }
+
+        .blog__new {
+            max-width: 105px;
+            background: rgba(246, 246, 246, 1);
+            color: rgba(23, 23, 23, 1);
+            font-family: 'VelaSans';
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 16px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-align: center;
+            vertical-align: middle;
+            padding: 6px;
+            border-radius: 10px;
+            transition: .3s;
+            margin-bottom: 10px;
+        }
+
+        .blog__new:hover {
+            opacity: 0.8;
+        }
+
+        .blog__text {
+            font-family: 'VelaSans';
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 120%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color: rgba(255, 255, 255, 1);
+            max-width: 312px;
+            margin: 0 0 10px;
+        }
+
+        .blog__dop {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .blog__date {
+            font-family: 'VelaSans';
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 20px;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color: rgba(148, 148, 148, 1);
+            margin: 0;
+        }
+
+        .blog__look {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 5px;
+            font-family: 'VelaSans';
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 13.45px;
+            leading-trim: NONE;
+            line-height: 20px;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color: rgba(148, 148, 148, 1);
+            margin: 0;
+        }
+    }
+
+    .swiper-slide.blog__big::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(197.2deg, rgba(0, 0, 0, 0) 10.14%, rgba(0, 0, 0, 0.8) 94.81%);
+        z-index: 1;
+    }
+
+    .swiper-slide.blog__small {
+        width: 290px !important;
+        height: 377px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+
+
+        @include vp-767 {
+            width: 250px !important;
+        }
+        .blog__image {
+            position: relative;
+            z-index: 1;
+
+        }
+
+        .blog__image::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 56.84%, #FFFFFF 100%);
+            z-index: 0;
+        }
+        .blog__info {
+            display: flex;
+            flex-direction: column;
+            height: 210px;
+            padding: 0 15px 15px;
+        }
+
+        .blog__new {
+            width: 105px;
+            background: rgba(246, 246, 246, 1);
+            color: rgba(23, 23, 23, 1);
+            font-family: 'VelaSans';
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 16px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-align: center;
+            vertical-align: middle;
+            padding: 6px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+           
+            transition: .3s;
+        }
+
+        .blog__new:hover {
+            opacity: 0.7;
+        }
+
+        .blog__text {
+            font-family: 'VelaSans';
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 16px;
+            leading-trim: NONE;
+            line-height: 120%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            margin: 0 0 0;
+        }
+
+        .blog__dop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .blog__date {
+            font-family: 'VelaSans';
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color: rgba(148, 148, 148, 1);
+        }
+
+        .blog__look {
+            font-family: 'VelaSans';
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 24px;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color: rgba(148, 148, 148, 1);
+        }
+    }
+
+    &__buttons {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        top: 50%;
+        z-index: 1;
+    }
+    
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        margin: 0;
+        flex-shrink: 0;
+        &::after {
+            display: none;
+        }
+
+        transition: .3s;
+        svg {
+            width: 120px;
+            height: 120px;
+            transition: .3s;
+            flex-shrink: 0;
+        }
+
+        &:hover {
+           opacity: 0.7;
+        }
+    }
+
+    .swiper-button-prev {
+        left: -10px;
+    }
+    
+    .swiper-button-next {
+        right: -10px;
+        svg {
+            transform: rotate(-180deg);
+        }
     }
 }

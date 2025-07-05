@@ -1,0 +1,26 @@
+mixin limit()
+    section.limit 
+        .container 
+            .limit__wrapper 
+                h2.limit__title Играй без лимитов
+                .limit__box
+                    .limit__slider.swiper(data-slider="limit")
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                img(src="img/content/limit.png" alt="Консоль")
+                            .swiper-slide 
+                                img(src="img/content/limit.png" alt="Консоль")
+                            .swiper-slide 
+                                img(src="img/content/limit.png" alt="Консоль")
+                            .swiper-slide 
+                                img(src="img/content/limit.png" alt="Консоль")
+                            .swiper-slide 
+                                img(src="img/content/limit.png" alt="Консоль")
+                            .swiper-slide 
+                                img(src="img/content/limit.png" alt="Консоль")
+                        .swiper-pagination.limit__pagination
+                    .limit__buttons 
+                        .swiper-button-prev.limit__prev
+                            +icon('arrow-left', 120, 120) 
+                        .swiper-button-next.limit__next
+                            +icon('arrow-left', 120, 120) 

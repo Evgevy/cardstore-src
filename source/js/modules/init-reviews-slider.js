@@ -7,12 +7,22 @@ const initReviewsSlider = () => {
 
   sliders.forEach(slider => {
     const swiper = new Swiper(slider, {
-        slidesPerView: 'auto',  
+        slidesPerView: 3,  
         spaceBetween: 16,
-        pagination: {
-            el: slider.querySelector('.swiper-pagination.reviews__pagination'), 
-            clickable: true, 
+        breakpoints: {
+          300: {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+          },
+          910: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
         },
+        navigation: {
+          nextEl: '.swiper-button-next.reviews__next',
+          prevEl: '.swiper-button-prev.reviews__prev',
+        }
     
     });
   });

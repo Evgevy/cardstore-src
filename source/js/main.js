@@ -18,6 +18,12 @@ import { initTabSlider } from './modules/init-tab-slider';
 import { initModels } from './modules/init-models';
 import { initBlogBtn } from './modules/init-blog-btn';
 import { initBlogList } from './modules/init-blog-list';
+import { initTechSlider } from './modules/init-tech-slider';
+import { initSelect1 } from './modules/init-select1';
+import { initStock } from './modules/init-stock';
+import { initLimit } from './modules/init-limit';
+import { initHome } from './modules/init-home';
+import { initBlog } from './modules/init-blog';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -43,6 +49,12 @@ window.addEventListener('DOMContentLoaded', () => {
     initModels();
     initBlogBtn();
     initBlogList();
+    initTechSlider();
+    initSelect1();
+    initStock();
+    initLimit();
+    initHome();
+    initBlog();
   });
 });
 

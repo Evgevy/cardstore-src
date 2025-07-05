@@ -1,0 +1,32 @@
+mixin home()
+    section.home 
+        .container 
+            .home__wrapper 
+                h2.home__title Все для дома
+                .home__box
+                    .home__slider.swiper(data-slider="home")
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                img(src="img/content/home.png" alt="Консоль")
+                                a(href="#!") Перейти к выбору
+                            .swiper-slide 
+                                img(src="img/content/home.png" alt="Консоль")
+                                a(href="#!") Перейти к выбору
+                            .swiper-slide 
+                                img(src="img/content/home.png" alt="Консоль")
+                                a(href="#!") Перейти к выбору
+                            .swiper-slide 
+                                img(src="img/content/home.png" alt="Консоль")
+                                a(href="#!") Перейти к выбору
+                            .swiper-slide 
+                                img(src="img/content/home.png" alt="Консоль")
+                                a(href="#!") Перейти к выбору
+                            .swiper-slide 
+                                img(src="img/content/home.png" alt="Консоль")
+                                a(href="#!") Перейти к выбору
+                        .swiper-pagination.home__pagination
+                    .home__buttons 
+                        .swiper-button-prev.home__prev
+                            +icon('arrow-left', 120, 120) 
+                        .swiper-button-next.home__next
+                            +icon('arrow-left', 120, 120) 

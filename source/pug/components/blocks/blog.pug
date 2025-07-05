@@ -8,220 +8,66 @@ mixin blog()
                         a(href="#!").blog__link Подписаться
                             +icon('blog', 13, 13)
                         a(href="#!").blog__link.all Все статьи
-                .blog__tab-buttons.swiper(data-slider="blog-btn")
-                    .blog__tab-list-btn.swiper-wrapper
-                        .blog__tab-item.swiper-slide 
-                            button(type="button" data-tab="tub-1").blog__tab-btn.blog__tab-btn--active Все
-                        .blog__tab-item.swiper-slide 
-                            button(type="button" data-tab="tub-2").blog__tab-btn Аксессуары
-                        .blog__tab-item.swiper-slide 
-                            button(type="button" data-tab="tub-3").blog__tab-btn Гаджеты
-                        .blog__tab-item.swiper-slide 
-                            button(type="button" data-tab="tub-4").blog__tab-btn iPhone
-                        .blog__tab-item.swiper-slide 
-                            button(type="button" data-tab="tub-5").blog__tab-btn iPad
-                        .blog__tab-item.swiper-slide 
-                            button(type="button" data-tab="tub-6").blog__tab-btn Apple Watch
-                        .blog__tab-item.swiper-slide 
-                            button(type="button" data-tab="tub-7").blog__tab-btn Mac
-                ul.blog__panel 
-                    li(id="tub-1").blog__panel-item.blog__panel-item--active
-                        ul.blog__tab-list.swiper(data-slider="tablist")
-                            .blog__slider-list.swiper-wrapper 
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                            .swiper-pagination.blog-pagination
-                    li(id="tub-2").blog__panel-item
-                        ul.blog__tab-list.swiper(data-slider="tablist") 
-                            .blog__slider-list.swiper-wrapper
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                            .swiper-pagination.blog-pagination
-                    li(id="tub-3").blog__panel-item
-                        ul.blog__tab-list.swiper(data-slider="tablist") 
-                            .blog__slider-list.swiper-wrapper
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                            .swiper-pagination.blog-pagination
-                    li(id="tub-4").blog__panel-item
-                        ul.blog__tab-list.swiper(data-slider="tablist") 
-                            .blog__slider-list.swiper-wrapper
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                            .swiper-pagination.blog-pagination
-                    li(id="tub-5").blog__panel-item
-                        ul.blog__tab-list.swiper(data-slider="tablist")
-                            .blog__slider-list.swiper-wrapper
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                            .swiper-pagination.blog-pagination
-                    li(id="tub-6").blog__panel-item
-                        ul.blog__tab-list.swiper(data-slider="tablist") 
-                            .blog__slider-list.swiper-wrapper
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)   
-                            .swiper-pagination.blog-pagination 
-                    li(id="tub-7").blog__panel-item
-                        ul.blog__tab-list.swiper(data-slider="tablist") 
-                            .blog__slider-list.swiper-wrapper
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10)
-                                li.blog__tab-content.swiper-slide 
-                                    a(href="#!").blog__card
-                                        .blog__image
-                                            img(src="img/content/blog1.png" alt="Превью статьи" width="570" height="377")
-                                            .blog__info 
-                                                h3.blog__name Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
-                                                .blog__extra 
-                                                    p.blog__date 6 февраля
-                                                    p.blog__views 146
-                                                        +icon('views', 14, 10) 
-                            .swiper-pagination.blog-pagination
-                a(href="#!").blog__link-mobile Подписаться
-                    +icon('blog', 13, 13)
+                .blog__slider.swiper(data-slider="blog")
+                    .swiper-wrapper 
+                        .swiper-slide.blog__big 
+                            .blog__image
+                                img(src="img/content/blog1.png" alt="блог")
+                            .blog__info 
+                                a(href="#!").blog__new Новости
+                                p.blog__text Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
+                                .blog__dop 
+                                    p.blog__date 6 февраля
+                                    p.blog__look 146
+                                        +icon('eyes', 14, 10)
+                        .swiper-slide.blog__small 
+                            .blog__image 
+                                img(src="img/content/blog1.png" alt="блог")
+                            .blog__info 
+                                a(href="#!").blog__new Новости
+                                p.blog__text Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
+                                .blog__dop 
+                                    p.blog__date 17 июля
+                                    p.blog__look 1220 просмотров
+                        .swiper-slide.blog__small 
+                            .blog__image 
+                                img(src="img/content/blog1.png" alt="блог")
+                            .blog__info 
+                                a(href="#!").blog__new Новости
+                                p.blog__text Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
+                                .blog__dop 
+                                    p.blog__date 17 июля
+                                    p.blog__look 1220 просмотров
+                        .swiper-slide.blog__big 
+                            .blog__image
+                                img(src="img/content/blog1.png" alt="блог")
+                            .blog__info 
+                                a(href="#!").blog__new Новости
+                                p.blog__text Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
+                                .blog__dop 
+                                    p.blog__date 6 февраля
+                                    p.blog__look 146
+                                        +icon('eyes', 14, 10)
+                        .swiper-slide.blog__small 
+                            .blog__image 
+                                img(src="img/content/blog1.png" alt="блог")
+                            .blog__info 
+                                a(href="#!").blog__new Новости
+                                p.blog__text Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
+                                .blog__dop 
+                                    p.blog__date 17 июля
+                                    p.blog__look 1220 просмотров
+                        .swiper-slide.blog__small 
+                            .blog__image 
+                                img(src="img/content/blog1.png" alt="блог")
+                            .blog__info 
+                                a(href="#!").blog__new Новости
+                                p.blog__text Что подарить парню, супругу или отцу на гендерные праздники в 2025 году
+                                .blog__dop 
+                                    p.blog__date 17 июля
+                                    p.blog__look 1220 просмотров
+                .blog__buttons 
+                    .swiper-button-next.blog__next
+                        +icon('arrow-left', 120, 120) 
+                    .swiper-button-prev.blog__prev
+                        +icon('arrow-left', 120, 120)

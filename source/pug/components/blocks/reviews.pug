@@ -5,550 +5,100 @@ mixin reviews()
                 .reviews__top 
                     h2.reviews__title Мнения наших клиентов
                     .reviews__grades 
+                        .reviews__grade.reviews__grade--active
+                            .reviews__rat 
+                                p 5
+                                +icon('star', 20, 20)
+                            .reviews__line 
+                                +icon('line', 2, 17)
+                            p.reviews__rat-all 1228 отзывов
                         .reviews__grade 
-                            img(src="img/content/grade1.png" alt="Оценка сервиса" width="118" height="24")
+                            p.reviews__who Авито
+                            p.reviews__many 5.0
+                                 +icon('star', 20, 20)
                         .reviews__grade 
-                            img(src="img/content/grade2.png" alt="Оценка сервиса" width="118" height="24")
+                            p.reviews__who 2GIS
+                            p.reviews__many 5.0
+                                 +icon('star', 20, 20)
                         .reviews__grade 
-                            img(src="img/content/grade3.png" alt="Оценка сервиса" width="118" height="24")
-                .reviews__tab-buttons.swiper(data-slider="rew")
-                    .reviews__box.swiper-wrapper
-                        .reviews__tab-item.swiper-slide 
-                            button(type="button" data-tab="tyb-1").reviews__tab-btn.reviews__tab-btn--active Все
-                        .reviews__tab-item.swiper-slide  
-                            button(type="button" data-tab="tyb-2").reviews__tab-btn Сервис
-                        .reviews__tab-item.swiper-slide  
-                            button(type="button" data-tab="tyb-3").reviews__tab-btn Цена
-                        .reviews__tab-item.swiper-slide  
-                            button(type="button" data-tab="tyb-4").reviews__tab-btn Доставка
-                        .reviews__tab-item.swiper-slide  
-                            button(type="button" data-tab="tyb-5").reviews__tab-btn Магазин
-                        .reviews__tab-item.swiper-slide  
-                            button(type="button" data-tab="tyb-6").reviews__tab-btn Товар
-                        .reviews__tab-item.swiper-slide 
-                            button(type="button" data-tab="tyb-7").reviews__tab-btn Продукт
-                        .reviews__tab-item.swiper-slide  
-                            button(type="button" data-tab="tyb-8").reviews__tab-btn Персонал
+                            p.reviews__who Яндекс
+                            p.reviews__many 5.0
+                                 +icon('star', 20, 20)
                 ul.reviews__panel 
-                    li(id="tyb-1").reviews__panel-item.reviews__panel-item--active
-                        .reviews__tab-list.swiper(data-slider="reviews")
-                            .swiper-wrapper 
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a> 
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                            .swiper-pagination.reviews__pagination
-                    li(id="tyb-2").reviews__panel-item
-                        .reviews__tab-list.swiper(data-slider="reviews")
-                            .swiper-wrapper 
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                            .swiper-pagination.reviews__pagination
-                    li(id="tyb-3").reviews__panel-item
-                        .reviews__tab-list.swiper(data-slider="reviews")
-                            .swiper-wrapper 
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                            .swiper-pagination.reviews__pagination
-                    li(id="tyb-4").reviews__panel-item
-                        .reviews__tab-list.swiper(data-slider="reviews")
-                            .swiper-wrapper 
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                            .swiper-pagination.reviews__pagination
-                    li(id="tyb-5").reviews__panel-item
-                        .reviews__tab-list.swiper(data-slider="reviews")
-                            .swiper-wrapper 
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                            .swiper-pagination.reviews__pagination
-                    li(id="tyb-6").reviews__panel-item
-                        .reviews__tab-list.swiper(data-slider="reviews")
-                            .swiper-wrapper 
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                            .swiper-pagination.reviews__pagination
-                    li(id="tyb-7").reviews__panel-item
-                        .reviews__tab-list.swiper(data-slider="reviews")
-                            .swiper-wrapper 
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                            .swiper-pagination.reviews__pagination
-                    li(id="tyb-8").reviews__panel-item
-                        .reviews__tab-list.swiper(data-slider="reviews")
-                            .swiper-wrapper 
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                                .swiper-slide 
-                                    .reviews__slide-top 
-                                        +icon('avito', 48, 48)
-                                        .reviews__user 
-                                            p.reviews__name Сергей
-                                            p.reviews__day 10 февраля на <a href="#!"> Авито </a>
-                                    .reviews__raiting
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20)
-                                        +icon('star', 20, 20) 
-                                    p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
-                                    a(href="#!").reviews__link Читать дальше
-                            .swiper-pagination.reviews__pagination
+                    .reviews__tab-list.swiper(data-slider="reviews")
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                .reviews__slide-top 
+                                    +icon('avito', 48, 48)
+                                    .reviews__user 
+                                        p.reviews__name Сергей
+                                        p.reviews__day 10 февраля на <a href="#!"> Авито </a> 
+                                .reviews__raiting
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20) 
+                                p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
+                                a(href="#!").reviews__link Читать дальше
+                            .swiper-slide 
+                                .reviews__slide-top 
+                                    +icon('avito', 48, 48)
+                                    .reviews__user 
+                                        p.reviews__name Сергей
+                                        p.reviews__day 10 февраля на <a href="#!"> Авито </a>
+                                .reviews__raiting
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20) 
+                                p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
+                                a(href="#!").reviews__link Читать дальше
+                            .swiper-slide 
+                                .reviews__slide-top 
+                                    +icon('avito', 48, 48)
+                                    .reviews__user 
+                                        p.reviews__name Сергей
+                                        p.reviews__day 10 февраля на <a href="#!"> Авито </a>
+                                .reviews__raiting
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20) 
+                                p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
+                                a(href="#!").reviews__link Читать дальше
+                            .swiper-slide 
+                                .reviews__slide-top 
+                                    +icon('avito', 48, 48)
+                                    .reviews__user 
+                                        p.reviews__name Сергей
+                                        p.reviews__day 10 февраля на <a href="#!"> Авито </a>
+                                .reviews__raiting
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20) 
+                                p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
+                                a(href="#!").reviews__link Читать дальше
+                            .swiper-slide 
+                                .reviews__slide-top 
+                                    +icon('avito', 48, 48)
+                                    .reviews__user 
+                                        p.reviews__name Сергей
+                                        p.reviews__day 10 февраля на <a href="#!"> Авито </a>
+                                .reviews__raiting
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20)
+                                    +icon('star', 20, 20) 
+                                p.reviews__reviews-text Это самый дружелюбный и лучший магазин в этом месте. Самая низкая цена, приветливый персонал, год гарантии на устройство Apple от… 
+                                a(href="#!").reviews__link Читать дальше
+                    .reviews__buttons 
+                        .swiper-button-next.reviews__next
+                            +icon('arrow-left', 120, 120) 
+                        .swiper-button-prev.reviews__prev
+                            +icon('arrow-left', 120, 120)

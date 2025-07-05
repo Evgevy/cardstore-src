@@ -9,8 +9,8 @@ mixin header(headerMods, currentUrl)
           .header__top 
             p.header__adress Москва и область
               +icon('adress', 9, 8)
-            p.header__city г. Москва, ул. Барклая, д 10, ТЦ "Багратионовский", 1-й этаж, магазин А-27
-              +icon('city', 10, 13)
+            p.header__adress-top Указать точный адрес
+              +icon('adress-top', 3, 3)
             .header__phone 
               a(href="tel:+79339003343") +7 (933) 900-33-43
                 +icon('phone', 10, 10)
@@ -19,14 +19,21 @@ mixin header(headerMods, currentUrl)
                 .header__another-phone 
                   a(href="tel:+79770004503") +7 (977) 000-45-03
                     +icon('phone', 10, 10)
+            button(type="button").header__call Заказать звонок
+            p.header__city г. Москва, ул. Барклая, д 10, ТЦ "Багратионовский", 1-й этаж, магазин А-27
+              +icon('city', 10, 13)
+            p.header__time с 10:00 до 20:00
+              +icon('time', 16, 16)
+           
           .header__center 
             .header__logo-block
               a.header__logo(href="/", aria-label="Переход на главную")
                 img(src="img/content/logo.webp").header__logo-icon
-              p.header__logo-text Только новая оригинальная техника!
+              a(href="#!").header__logo-text Каталог
+                +icon('catal', 13, 13)
             .header__search 
               form(metod="get")
-                input(type="text" placeholder="Поиск")
+                input(type="text" placeholder="Найти товар")
                 button(type="submit")
                   +icon('search', 10, 10)
             .header__center-box 
@@ -51,29 +58,39 @@ mixin header(headerMods, currentUrl)
           .header__bottom 
             .main-nav__menu
               <ul class="main-nav__list" data-header-accordion>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Apple</a>
+                <li class="main-nav__item main-nav__item--stars">
+                  <a class="main-nav__link  main-nav__link--stars" href="#">Новинка
+                    +icon('stars', 13, 13)
+                  </a>
                 </li>
-                <li class="main-nav__item menu-item-has-children">
-                  <a class="main-nav__link" href="#">Смартфоны и гаджеты</a>
+                <li class="main-nav__item main-nav__item--iphone menu-item-has-children">
+                  <a class="main-nav__link main-nav__link--iphone" href="#">iPhone 16
+                    +icon('fire', 13, 13)
+                  </a>
                 </li>   
                 <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Для дома</a>
+                  <a class="main-nav__link" href="#">Смартфоны</a>
                 </li>
                 <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Аудио и видео</a>
+                  <a class="main-nav__link" href="#">Планшеты</a>
                 </li>
                 <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Компьютеры и ноутбуки</a>
+                  <a class="main-nav__link" href="#">Ноутбуки и Компьютеры </a>
                 </li>
                 <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Красота и здоровье</a>
+                  <a class="main-nav__link" href="#">Игровые консоли</a>
                 </li>
                   <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Развлечения</a>
+                  <a class="main-nav__link" href="#">Умные часы</a>
                 </li>
-                  <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Весь каталог</a>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Аудио </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Красота и здоровье </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Для дома </a>
                 </li>
               </ul>
         //- nav.main-nav
