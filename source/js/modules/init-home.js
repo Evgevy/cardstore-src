@@ -11,7 +11,7 @@ const initHome = () => {
     spaceBetween: 16,
     // initialSlide: 1,
     // centeredSlides: true,  
-    // loop: true,
+    loop: true,
     breakpoints: {
       300: {
         slidesPerView: 1,

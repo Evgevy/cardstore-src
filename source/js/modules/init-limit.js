@@ -9,6 +9,7 @@ const initLimit = () => {
     slidesPerView: 'auto', 
     // centeredSlides: true, // Центрирует активный слайд
     spaceBetween: 16,
+    loop: true,
     // initialSlide: 1,
     // centeredSlides: true,  
     // loop: true,
